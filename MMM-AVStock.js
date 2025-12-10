@@ -424,7 +424,7 @@ Module.register("MMM-AVStock", {
             this.log(payload);
             var symbol = payload.quotes.price.symbol;
             this.stocks[symbol]["quotes"] = this.formatQuotes(payload.quotes);
-            this.stocks[symbol]["hist"] = this.formatOHLC(payload.historical);
+            this.stocks[symbol]["hist"] = (payload.historical && payload.historical !== "") ? this.formatOHLC(payload.historical) : [];
             this.updateData(this.config.mode);
             if (!this.loaded) { 
                 this.loaded = true;
