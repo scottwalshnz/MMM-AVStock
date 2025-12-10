@@ -426,6 +426,7 @@ Module.register("MMM-AVStock", {
             this.stocks[symbol]["quotes"] = this.formatQuotes(payload.quotes);
             this.stocks[symbol]["hist"] = (payload.historical && payload.historical !== "") ? this.formatOHLC(payload.historical) : [];
             this.updateData(this.config.mode);
+            if (document.getElementById("AVSTOCK_TAGLINE")) document.getElementById("AVSTOCK_TAGLINE").innerHTML = "Last quote: " + moment(this.updateTime).format("MM-DD HH:mm");
             if (!this.loaded) { 
                 this.loaded = true;
                 this.log(this.name + " fully loaded...")
