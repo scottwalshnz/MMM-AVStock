@@ -1,5 +1,12 @@
 const YahooFinance = require('yahoo-finance2').default;
-const yfinance2 = new YahooFinance();
+const yahooFinance = new YahooFinance({
+  fetchOptions: {
+    headers: {
+      "User-Agent": "Mozilla/5.0 (compatible; yfinance ^3.11.2)",
+    },
+  },
+});
+
 const moment = require('moment');
 
 var NodeHelper = require("node_helper")
