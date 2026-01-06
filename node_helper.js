@@ -50,6 +50,7 @@ module.exports = NodeHelper.create({
 	        } catch (error) {
 				stock.quotes = "";
 				console.error("Error in loading quote data for Symbol "+ cfg.symbols[i]);
+				console.error(error);
 				self.log(error);
 			};
             try {
