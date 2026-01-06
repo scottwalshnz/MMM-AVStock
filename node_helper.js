@@ -57,7 +57,8 @@ module.exports = NodeHelper.create({
 				stock.historical = await yfinance2._chart(cfg.symbols[i], {period1: moment().subtract(cfg.chartDays, 'days').format('YYYY-MM-DD')});
             } catch (error) {
 				stock.historical = "";
-				console.error("Error in loading historical data for Symbol "+ cfg.symbols[i])
+				console.error("Error in loading historical data for Symbol "+ cfg.symbols[i]);
+				console.error(error);
 			};
 			this.log(stock);
             this.log(stock.historical.quotes);
