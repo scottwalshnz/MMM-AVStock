@@ -1,5 +1,5 @@
 const YahooFinance = require('yahoo-finance2').default;
-const yahooFinance = new YahooFinance({
+const yfinance2 = new YahooFinance({
   fetchOptions: {
     headers: {
       "User-Agent": "Mozilla/5.0 (compatible; yfinance ^3.11.2)",
