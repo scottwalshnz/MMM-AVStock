@@ -66,7 +66,7 @@ MagicMirror module for displaying stock price using the Alphavantage API.
 ## Installation
 ```shell
 cd ~/MagicMirror/modules
-git clone https://github.com/lavolp3/MMM-AVStock
+git clone https://github.com/scottwalshnz/MMM-AVStock
 cd MMM-AVStock
 npm install
 ```
