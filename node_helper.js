@@ -50,7 +50,6 @@ module.exports = NodeHelper.create({
 	        } catch (error) {
 				stock.quotes = "";
 				console.error("Error in loading quote data for Symbol "+ cfg.symbols[i]);
-				console.error(error);
 				self.log(error);
 			};
             try {
@@ -58,7 +57,6 @@ module.exports = NodeHelper.create({
             } catch (error) {
 				stock.historical = "";
 				console.error("Error in loading historical data for Symbol "+ cfg.symbols[i]);
-				console.error(error);
 			};
 			this.log(stock);
             this.log(stock.historical.quotes);
